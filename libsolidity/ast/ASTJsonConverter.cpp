@@ -225,7 +225,7 @@ Json::Value ASTJsonConverter::inlineAssemblyIdentifierToJson(pair<yul::Identifie
 	tuple["src"] = sourceLocationToString(_info.first->location);
 	tuple["declaration"] = idOrNull(_info.second.declaration);
 	tuple["isSlot"] = Json::Value(_info.second.suffix == "slot");
-	tuple["isOffset"] = Json::Value(_info.second.suffix == "ofset");
+	tuple["isOffset"] = Json::Value(_info.second.suffix == "offset");
 	if (!_info.second.suffix.empty())
 		tuple["suffix"] = Json::Value(_info.second.suffix);
 	tuple["valueSize"] = Json::Value(Json::LargestUInt(_info.second.valueSize));
